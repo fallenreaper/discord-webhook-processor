@@ -14,13 +14,13 @@ def send_string_to_discord(s: str):
 
 def send_json_to_discord(data: dict):
 	"""Data dict requires the following keys:
-	- ticker
+	- title
 	- author
 	- content"""
 	_json = {
 		"embeds": [
 			{
-				"title": data['ticker'], 
+				"title": data['title'], 
 				'description': data['content'], 
 				'author': { 
 					'name': f"From: {data['author']}"
